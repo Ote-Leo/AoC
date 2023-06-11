@@ -47,6 +47,8 @@ In little Bobby's kit's instructions booklet (provided as your puzzle input), wh
 
 ## Part II
 
+Now, take the signal you got in wire `a`, override wire `b` to that signal, and reset the other wires (including wire `a`). What new signal is ultimately provided to wire `a`?
+
 
 [bitwise logic gates]: https://en.wikipedia.org/wiki/Bitwise_operation
 [16-bit]: https://en.wikipedia.org/wiki/16-bit_computing
