@@ -1,4 +1,7 @@
-def group(lst: list) -> list[list]:
+from typing import Sequence
+
+
+def group(lst: Sequence) -> Sequence[Sequence]:
     groups = []
     sub_group = []
     elem = None
@@ -20,7 +23,7 @@ def group(lst: list) -> list[list]:
 
 
 def count_and_say(line: str) -> str:
-    groups = group(list(line))
+    groups = group(line)
     res = ''
     for gpx in groups:
         res += str(len(gpx)) + gpx[0]
