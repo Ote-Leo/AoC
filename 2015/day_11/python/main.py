@@ -6,7 +6,7 @@ def show_password(password: list[int]) -> str:
     return ''.join(map(chr, reversed(password)))
 
 def parse_input(line: str) -> list[int]:
-    r = []
+    r: list[int] = []
     for c in reversed(line):
         r.append(ord(c))
     return r
