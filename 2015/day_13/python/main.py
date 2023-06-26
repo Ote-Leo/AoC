@@ -53,7 +53,7 @@ if __name__ == '__main__':
             parse_line(line, ctx, people)
         print(f'Part I')
         print(f'\tUltimate seating value is {ultimate_seating(people, ctx)}')
-        ctx.update({(p, 'Z'): 0 for p in people})
+        ctx: dict[tuple[str, str], int] = {**ctx, **{(p, 'Z'): 0 for p in people}}
         people.append('Z')
         print(f'Part II')
         print(f'\tUltimate seating value is {ultimate_seating(people, ctx)}')
