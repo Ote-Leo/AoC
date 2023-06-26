@@ -45,21 +45,15 @@ def calc_cost(lst: list[str], ctx: dict[tuple[str, str], int]) -> int:
 def ultimate_seating(people: list[str], ctx: dict[tuple[str, str], int]) -> int:
     return max(map(lambda s: calc_cost(s, ctx), permute(people)))
 
-def factorial(n: int) -> int:
-    if n < 2:
-        return 1
-    else:
-        return n * factorial(n - 1)
-
 if __name__ == '__main__':
     with open('../input.txt') as file:
         ctx = {}
         people: list[str] = []
         for line in file:
             parse_line(line, ctx, people)
-        print(f'Part I\t\tsearch space is {factorial(len(people))}')
+        print(f'Part I')
         print(f'\tUltimate seating value is {ultimate_seating(people, ctx)}')
         ctx.update({(p, 'Z'): 0 for p in people})
         people.append('Z')
-        print(f'Part II\t\tsearch space is {factorial(len(people))}')
+        print(f'Part II')
         print(f'\tUltimate seating value is {ultimate_seating(people, ctx)}')
